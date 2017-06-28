@@ -1,4 +1,5 @@
 # OTP_MACHINE
+It uses nodejs server, mysql database, expressjs middleware and ejs templates.
 Lets you add contacts and send them auto-generated 6 digit OTP.Displays the List of contacts and the messages sent to them ordered by GMT timstamp.
 
 # How does it work
