@@ -1,0 +1,42 @@
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+body{
+  -webkit-font-smoothing:antialiasing;
+  text-rendering: auto:optimizeLegibility;
+}
+
+ #searchInput{
+     width:200px;
+   }
+   .navbar-brand{
+     padding: 13px 15px;
+   }
+
+   #features{
+  text-align: center;
+
+}
+#features img{
+  margin: 0 0 20px;
+}
+
+#message{
+  margin:10px 0px;
+}
+#Head{
+  margin: 60px 20px;
+}

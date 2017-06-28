@@ -1,0 +1,151 @@
+<html>
+<head>
+
+		<!-- Website Title & Description for Search Engine purposes -->
+		<title></title>
+		<meta name="description" content="">
+
+		<!-- Mobile viewport optimized -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<!-- Bootstrap CSS -->
+		<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+		<!-- Custom CSS -->
+		<link href="includes/css/styles.css" rel="stylesheet">
+<!-- Include Modernizr in the head, before any other Javascript -->
+		<script src="includes/js/modernizr-2.6.2.min.js"></script>
+		<!-- First try for the online version of jQuery-->
+	<script src="http://code.jquery.com/jquery.js"></script>
+
+	<!-- If no online access, fallback to our hardcoded version of jQuery -->
+	<script>window.jQuery || document.write('<script src="includes/js/jquery-1.8.2.min.js"><\/script>')</script>
+
+	<!-- Custom Script -->
+	
+	<script src="clickable_name.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+	</head>
+	<body>
+
+
+			<div id="main" class="container">
+
+					<div class="navbar navbar-fixed-top">
+							<div class="container">
+								<button class="navbar-toggle" data-target=".navbar-responsive-collapse" data-toggle="collapse" type="button">
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="/"><img src="images/logo.png" alt="your logo"></a>
+								<div class="nav-collapse collapse navbar-responsive-collapse">
+									<ul class="nav navbar-nav">
+										<li class="active">
+											<a href="#">HOME</a>
+										</li>
+										<li class="dropdown">
+
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown">SERVICES<strong class="caret"></strong></a>
+											<ul class="dropdown-menu">
+												<li>
+													<a href="#">Web Design</a>
+												</li>
+												<li>
+													<a href="#">Web Development</a>
+												</li>
+												<li>
+													<a href="#">SEO</a>
+												</li>
+												<li class="divider">
+												</li>
+												<li class="dropdown-header">More Services
+												<li>
+													<a href="#">Content</a>
+												</li>
+												<li>
+													<a href="#">UI</a>
+												</li>
+											</ul><!--end dropdown ul-->
+										</li>
+									</ul><!-- end navbar-nav -->
+									<form class="navbar-form pull-left">
+											<input type="text" class="form-control" placeholder="SEARCH HERE" id="searchInput">
+											<button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" >
+											</span></button>
+									</form><!--end form -->
+									<ul class="nav navbar-nav pull-right">
+										<li class="dropdown">
+											<a href="#" class="dropdown-toggle" data-toggle="dropdown"><span class="glyphicon glyphicon-user"></span>My Account<strong class="caret"></strong></a>
+												<ul class="dropdown-menu">
+													<li>
+														<a href="#"><span class="glyphicon glyphicon-wrench"></span>Settings</a>
+													</li>
+													<li>
+														<a href="#"><span class="glyphicon glyphicon-refresh"></span>Profile</a>
+													</li>
+													<li>
+														<a href="#"><span class="glyphicon glyphicon-euro"></span>Billings</a>
+													</li>
+													<li class="divider"></li>
+													<li>
+														<a href="#"><span class="glyphicon glyphicon-off"></span>LogOut</a>
+													</li>
+												</ul><!-- end ul dropdown-menu-->
+										</li>
+									</ul><!--end nav-pull-right-->
+								</div><!--end nav-collapse -->
+							</div><!--end container-->
+					</div><!-- navbar end -->
+
+					<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+					<div id="Head" >
+						<h1> Add Contacts</h1>
+						<form name="add_contact"  method="post" onsubmit="javascript : return validateForm();" action="/addone" class="col-lg-12 col-sm-4 ">
+                                    <div class="row">
+                                    <div class="col-xs-12 col-lg-3">
+                                    <label for="avl">First Name</label>
+                                    <input class="form-control " name="First" id="First" required> 
+                                    <br>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3">
+                                    <label for="avl">Last Name</label>
+                                    <input class="form-control " name="Last" id="Last" required>
+                                    <br>
+                                    </div>
+                                    <div class="col-xs-12 col-lg-3">
+                                    <label for="avl">Phone No.</label>
+                                    <input class="form-control " name="Phone" id="Phone" required>
+                                    <br>
+                                    <button class="btn btn-default" id="add_one">Submit</button>
+                                    </div>
+                                    </div>
+                                </form>
+                        
+                            <div class="clearfix"></div>
+                            <br>
+                            <hr>
+                            <table id="table">
+							  <tr>
+							    <th>First Name</th>
+							    <th>Last Name</th>
+							  </tr>
+							  <% for(let i = 0; i < rows.length; i++) { %>
+							  <tr>
+							  <td><a onclick="javascript: submitForm(this)"><%=rows[i].First_Name%></a></td>
+							  <td><%=rows[i].Last_Name%></td>
+							  </tr>
+							  
+							  <% } %>
+							</table>
+					</div>
+			</div>
+
+	</body>				
+</html>
