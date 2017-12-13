@@ -16,7 +16,7 @@
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.1",
     "debug": "~2.2.0",
-    "ejs": "~0.8.5",
+    "ejs": "2.5.5",
     "express": "~4.13.4",
     "express-session": "~1.0.0",
     "file-system": "^2.2.2",
